@@ -367,3 +367,64 @@ header.sticky {
   bottom: 48%;
   opacity: 1;
 }
+
+.service-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  grid-gap: 2rem;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.row {
+  background: #fff;
+  box-shadow: 18px 0px 87px 0px rgb(10 15 70 / 7%);
+  border-radius: 12px;
+  padding: 45px 45px 45px 45px;
+  transition: ease .50s;
+  cursor: pointer;
+}
+
+.s img {
+  height: 65px;
+  width: 65px;
+  background: #f75124;
+  padding: 15px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.s.s-two img {
+  background: #baebcd;
+}
+
+.s.s-three img {
+  background: #d9d1fa;
+}
+
+.s.s-four img {
+  background: #faedce;
+}
+
+.row h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.row h5 {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 19px;
+}
+
+.row p {
+  font-size: var(--p-font);
+  color: var(--secound-color);
+  line-height: 28px;
+}
+
+.row:hover {
+  will-change: transform;
+  transform: perspective(1000px) rotateX(4.80deg) rotateY(10.23deg) scale3d(1.05, 1.05, 1.05);
+}
