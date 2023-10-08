@@ -231,7 +231,7 @@ header.sticky {
 }
 
 .sub-box:hover {
-  background: #f1f1f1;
+  background: #ffffff;
   box-shadow: 18px 0px 87px 0px rgb(10 15 70 / 7%);
   border-radius: 12px;
   will-change: transform;
@@ -342,7 +342,7 @@ header.sticky {
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  transition: all 0.40s;
+  transition: all .40s;
 }
 
 .layer:hover h3 {
@@ -360,7 +360,7 @@ header.sticky {
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  transition: all 0.40s;
+  transition: all .40s;
 }
 
 .layer:hover h5 {
@@ -377,11 +377,11 @@ header.sticky {
 }
 
 .row {
-  background: #fff;
+  background: #ffffff;
   box-shadow: 18px 0px 87px 0px rgb(10 15 70 / 7%);
   border-radius: 12px;
   padding: 45px 45px 45px 45px;
-  transition: ease .50s;
+  transition: ease .45s;
   cursor: pointer;
 }
 
@@ -394,7 +394,7 @@ header.sticky {
   margin-bottom: 20px;
 }
 
-.s.s-two img {
+.s.s-tow img {
   background: #baebcd;
 }
 
@@ -434,29 +434,29 @@ header.sticky {
   grid-template-columns: repeat(auto-fit, minmax(220px, auto));
   grid-gap: 2rem;
   align-items: center;
-  text-align: center;
   margin-top: 5rem;
+  text-align: center;
 }
 
 .wrap {
-  background-color: #fff;
+  background: #ffffff;
   box-shadow: 18px 0px 87px 0px rgb(10 15 70 / 7%);
   border-radius: 12px;
-  padding: 50px;
-  transition: ease 0.40s;
+  padding: 50px 50px 50px 50px;
+  transition: ease .40s;
   cursor: pointer;
 }
 
 .one {
-  background-color: #baebcd;
+  background: #baebcd;
 }
 
 .two {
-  background-color: #d9d1fa;
+  background: #D9D1FA;
 }
 
 .three {
-  background-color: #faedce;
+  background: #faedce;
 }
 
 .wrap h3 {
@@ -470,21 +470,22 @@ header.sticky {
 }
 
 .contact {
-  background-color: #8067f0eb;
+  background: #8067f0eb;
   width: 64%;
   margin: 100px auto;
   padding: 70px 150px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   border-radius: 12px;
-  background-image: url(imgg/intro.png);
+  background-image: url(../img/intro.png);
   background-size: cover;
 }
 
 .center h3 {
   font-size: 30px;
-  outline-width: 500;
+  font-weight: 500;
   margin-bottom: 3px;
   color: var(--bg-color);
 }
@@ -510,7 +511,7 @@ header.sticky {
 
 .contact .action form input[type="submit"] {
   padding: 12px 40px;
-  background-color: var(--main-color);
+  background: var(--main-color);
   color: var(--bg-color);
   border: none;
   outline: none;
@@ -527,4 +528,121 @@ header.sticky {
 .ends p {
   font-size: var(--p-font);
   letter-spacing: 1px;
+}
+
+@media (max-width: 1425px) {
+  header {
+    padding: 16px 3%;
+    transition: .3s;
+  }
+
+  header.sticky {
+    padding: 10px 3%;
+    transition: .3s;
+  }
+
+  section {
+    padding: 70px 3%;
+    transition: .3s;
+  }
+
+  .contact {
+    width: 95%;
+    transition: .3s;
+  }
+
+  :root {
+    --big-font: 4rem;
+    --h2-font: 2.3rem;
+    --p-font: 1rem;
+    transition: .3s;
+  }
+}
+
+@media (max-width: 970px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .home {
+    min-height: 80vh;
+  }
+
+  .navlist {
+    position: absolute;
+    top: -600px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--main-color);
+    text-align: right;
+    transition: all .40s;
+  }
+
+  .navlist a {
+    display: block;
+    padding: 1.2rem;
+    margin: 1.5rem;
+    border-right: 2px solid var(--bg-color);
+    color: var(--bg-color);
+  }
+
+  .navlist a:hover {
+    background: var(--bg-color);
+    color: var(--main-color);
+  }
+
+  .navlist a::after {
+    display: none;
+  }
+
+  .navlist.active {
+    top: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .home {
+    grid-template-columns: 1fr;
+    min-height: 130vh;
+    grid-gap: 1rem;
+  }
+
+  .home-text {
+    padding-top: 55px;
+  }
+
+  .home-img {
+    text-align: center;
+  }
+
+  .home-img img {
+    width: 440px;
+    height: auto;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about-img {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  :root {
+    --big-font: 3.4rem;
+    --h2-font: 2rem;
+  }
+
+  section {
+    padding: 65px 3%;
+    transition: .3s;
+  }
+}
+
+@media (max-width: 540px) {
+  .contact .action form input[type="email"] {
+    width: 310px;
+  }
 }
