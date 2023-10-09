@@ -103,6 +103,7 @@ header {
 
 section {
   padding: 100px 18%;
+  margin: 0 auto;
 }
 
 .home {
@@ -642,7 +643,15 @@ header.sticky {
 }
 
 @media (max-width: 540px) {
+  .navlist a {
+    font-size: 0.9rem;
+  }
+
   .contact .action form input[type="email"] {
     width: 310px;
+  }
+
+  .service-content {
+    grid-template-columns: 1fr;
   }
 }
